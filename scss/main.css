@@ -154,9 +154,10 @@ button.menu-btn:hover span {
   font-weight: 700;
   margin-bottom: 30px;
 }
-@media (max-width: 792px) {
+@media (max-width: 1200px) {
   .title h1 {
     font-size: 36px;
+    text-align: center;
   }
 }
 @media (max-width: 576px) {
@@ -171,14 +172,25 @@ button.menu-btn:hover span {
   font-weight: 700;
   margin-bottom: 30px;
 }
-@media (max-width: 792px) {
+@media (max-width: 1200px) {
   .title h2 {
     font-size: 32px;
+    text-align: center;
   }
 }
 @media (max-width: 576px) {
   .title h2 {
     font-size: 30px;
+  }
+}
+
+.text p {
+  font-size: 16px;
+}
+@media (max-width: 792px) {
+  .text p {
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -411,6 +423,7 @@ section.about .block .right .image img {
     max-width: 100%;
     height: auto;
     width: auto;
+    margin-bottom: 30px;
   }
 }
 section.about .block .right .image:after {
@@ -497,4 +510,9 @@ section.projects {
   padding-top: 100px;
   background-color: #8a763c;
   height: 120vh;
+}
+
+footer {
+  height: 300px;
+  background-color: #4A5759;
 }/*# sourceMappingURL=main.css.map */
