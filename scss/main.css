@@ -431,6 +431,67 @@ section.about .block .right .image:after {
   }
 }
 
+section.numbers {
+  padding: 100px 0 0 0;
+}
+section.numbers .block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section.numbers .block .column {
+  width: calc(25% - 15px);
+  height: 320px;
+  background-color: #8a763c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
+}
+@media (max-width: 1440px) {
+  section.numbers .block .column {
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 792px) {
+  section.numbers .block .column {
+    margin-bottom: 15px;
+    width: calc(50% - 7.5px);
+  }
+}
+@media (max-width: 576px) {
+  section.numbers .block .column {
+    width: 100%;
+  }
+}
+section.numbers .block .column .number-item .value {
+  font-size: 80px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
+}
+section.numbers .block .column .desc p {
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: #8a763c;
+}
+section.numbers .block .column:first-child {
+  background-color: #DEDBD2;
+}
+section.numbers .block .column:nth-child(2) {
+  background-color: #B0C4B1;
+}
+section.numbers .block .column:nth-child(3) {
+  background-color: #F7E1D7;
+}
+section.numbers .block .column:last-child {
+  background-color: #4A5759;
+}
+
 section.projects {
   margin-top: 120px;
   padding-top: 100px;
