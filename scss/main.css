@@ -257,6 +257,7 @@ button.menu-btn:hover span {
 @media (max-width: 792px) {
   .intro .block .top::before {
     top: 90px;
+    width: calc(100vw - 30px);
   }
 }
 @media (max-width: 792px) {
