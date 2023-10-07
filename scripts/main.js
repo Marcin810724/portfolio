@@ -27,25 +27,25 @@ document.addEventListener('click', function (event) {
 
 
 // Pobierz elementy sekcji intro
-var introSections = document.querySelectorAll(".intro");
+// var introSections = document.querySelectorAll(".intro");
 
-// Ustal początkową opacity
-var initialOpacity = 1;
+// // Ustal początkową opacity
+// var initialOpacity = 1;
 
-// Dodaj nasłuchiwanie na zdarzenie scroll
-window.addEventListener("scroll", function () {
-  // Dla każdej sekcji intro
-  introSections.forEach(function (introSection) {
-    // Oblicz nową opacity na podstawie pozycji przewijania
-    var newOpacity = 1 - (window.scrollY / (window.innerHeight / 2));
+// // Dodaj nasłuchiwanie na zdarzenie scroll
+// window.addEventListener("scroll", function () {
+//   // Dla każdej sekcji intro
+//   introSections.forEach(function (introSection) {
+//     // Oblicz nową opacity na podstawie pozycji przewijania
+//     var newOpacity = 1 - (window.scrollY / (window.innerHeight / 2));
 
-    // Ogranicz opacity do przedziału od 0 do 1
-    newOpacity = Math.max(0, Math.min(1, newOpacity));
+//     // Ogranicz opacity do przedziału od 0 do 1
+//     newOpacity = Math.max(0, Math.min(1, newOpacity));
 
-    // Ustaw nową opacity dla danej sekcji intro
-    introSection.style.opacity = newOpacity;
-  });
-});
+//     // Ustaw nową opacity dla danej sekcji intro
+//     introSection.style.opacity = newOpacity;
+//   });
+// });
 
 // ------------
 // Pobierz wszystkie linki z menu

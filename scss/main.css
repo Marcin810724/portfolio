@@ -1,6 +1,7 @@
 :root {
   --font-poppins: "Poppins", sans-serif;
   --font-roboto-condense: "Roboto Condensed", sans-serif;
+  --font-inter:"Inter", sans-serif;
 }
 
 * {
@@ -15,8 +16,8 @@ html {
 
 body {
   background: #FFFFFF;
-  font-family: var(--font-poppins);
-  font-weight: 300;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 button.menu-btn {
@@ -149,9 +150,8 @@ button.menu-btn:hover span {
 }
 
 .title h1 {
-  font-family: var(--font-roboto-condense);
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 65px;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 @media (max-width: 1200px) {
@@ -167,7 +167,6 @@ button.menu-btn:hover span {
 }
 
 .title h2 {
-  font-family: var(--font-roboto-condense);
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 30px;
@@ -213,19 +212,30 @@ button.menu-btn:hover span {
 
 .intro {
   height: 100vh;
+  width: 100%;
   position: relative;
   opacity: 1;
   transition: opacity 1s;
   overflow: hidden;
-  background-image: url(../img/icons/bg-top.webp);
+  background-image: linear-gradient(#262730, #262730), url(../img/icons/bg-top.webp);
+  background-size: cover;
+  background-position: top center;
 }
-.intro:after {
-  content: "";
+.intro .icon-rocket {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 15vh;
+  top: 15vh;
+}
+.intro .icon-rocket img {
+  fill: red;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  -o-object-position: center;
+     object-position: center;
 }
 .intro .block {
   display: flex;
@@ -237,28 +247,10 @@ button.menu-btn:hover span {
   justify-content: center;
 }
 .intro .block .top {
-  height: 300px;
-  width: 300px;
+  height: 220px;
+  width: 220px;
   margin-bottom: 30px;
   position: relative;
-}
-.intro .block .top::before {
-  content: "";
-  display: block;
-  width: calc(100vw - 80px);
-  height: 120vw;
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ffffff;
-  z-index: 1;
-}
-@media (max-width: 792px) {
-  .intro .block .top::before {
-    top: 90px;
-    width: calc(100vw - 30px);
-  }
 }
 @media (max-width: 792px) {
   .intro .block .top {
@@ -274,19 +266,22 @@ button.menu-btn:hover span {
   border-radius: 50%;
   position: relative;
   z-index: 1;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 0px 1px 1px #ffffff;
   animation: pulse-animation 2s infinite;
 }
 @keyframes pulse-animation {
   0% {
-    box-shadow: 0 0 0 0px rgba(92, 87, 92, 0.4);
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
   }
   100% {
-    box-shadow: 0 0 0 20px rgba(255, 79, 152, 0);
+    box-shadow: 0 0 0 14px rgba(255, 79, 152, 0);
   }
 }
+.intro .block .bottom .content .title {
+  position: relative;
+}
 .intro .block .bottom .content .title h1 {
-  color: #4A5759;
+  color: #f7a072;
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
@@ -296,8 +291,93 @@ button.menu-btn:hover span {
 }
 .intro .block .bottom .content .title h1 span {
   text-transform: lowercase;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 36px;
+  color: #eddea4;
+  position: relative;
+}
+.intro .block .bottom .content .title h1 span svg {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: -40px;
+  bottom: 10px;
+  opacity: 0;
+  transition: 0.5s linear;
+  animation: heartPule 1s infinite;
+}
+.intro .block .bottom .content .title h1 span svg path {
+  fill: red;
+}
+@keyframes heartPule {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.intro .intro-block .monitor {
+  padding: 0;
+  width: 300px;
+  max-width: 300px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.intro .intro-block svg {
+  max-width: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.intro .intro-block svg .ekg {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  opacity: 0;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+  animation: ekg 1.5s linear forwards infinite;
+}
+.intro .intro-block h1,
+.intro .intro-block h3,
+.intro .intro-block p {
+  background-color: #0b0e13;
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-left: 2px solid #0f3a4d;
+  border-right: 2px solid #0f3a4d;
+  text-shadow: 1px 1px 1px #0f3a4d, 1px -1px 1px #0f3a4d, -1px 1px 1px #0f3a4d, -1px -1px 1px #0f3a4d;
+}
+.intro .intro-block p {
+  border-radius: 0 0 20px 20px;
+  border-bottom: 2px solid #0f3a4d;
+  padding-bottom: 20px;
+}
+@keyframes ekg {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 2000;
+  }
+  99% {
+    opacity: 0;
+    stroke-dashoffset: 3000;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
 }
 .intro .arrow {
   position: absolute;
@@ -331,7 +411,7 @@ button.menu-btn:hover span {
   display: block;
   width: 20px;
   height: 1px;
-  background: #000;
+  background: #ffffff;
 }
 .intro .arrow::before {
   transform: rotate(45deg);
@@ -367,7 +447,6 @@ section.about .block .left {
   }
 }
 section.about .block .left .title h2 {
-  font-family: var(--font-roboto-condense);
   color: #183D3D;
   position: relative;
   display: inline-block;
@@ -449,7 +528,6 @@ section.about .cv-content .content {
 }
 section.about .cv-content .content .title h2 {
   color: #183D3D;
-  font-family: var(--font-roboto-condense);
   position: relative;
   display: inline-block;
 }
@@ -498,7 +576,6 @@ section.about .cv-content .block-cv .right h3 {
   color: #183D3D;
   text-transform: uppercase;
   font-size: 16px;
-  font-family: var(--font-roboto-condense);
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -591,7 +668,6 @@ section.numbers .block .column .number-item .value {
   margin-bottom: 15px;
   font-weight: 400;
   color: #FFFFFF;
-  font-family: var(--font-roboto-condense);
 }
 section.numbers .block .column .desc p {
   margin-bottom: 0;
