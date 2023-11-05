@@ -237,6 +237,20 @@ button.menu-btn:hover span {
   -o-object-position: center;
      object-position: center;
 }
+@media (max-width: 1200px) {
+  .intro .icon-rocket {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media (max-width: 991px) {
+  .intro .icon-rocket {
+    width: 90px;
+    height: 90px;
+    top: 30px;
+    right: 30px;
+  }
+}
 .intro .block {
   display: flex;
   flex-direction: column;
@@ -383,8 +397,7 @@ button.menu-btn:hover span {
   position: absolute;
   z-index: 1;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(50% - 18.5px);
   animation: bounce 3s infinite;
   display: block;
   width: 37px;
@@ -706,14 +719,93 @@ section.numbers.parallax {
   background-size: cover;
 }
 
-section.projects {
-  margin-top: 120px;
-  padding-top: 100px;
-  background-color: #8a763c;
-  height: 120vh;
+section.projects .project {
+  min-height: 700px;
+  height: 100%;
+  min-height: 85vh;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: 650px 650px !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat !important;
+}
+@media (max-width: 1200px) {
+  section.projects .project {
+    min-height: unset;
+    padding: 60px 0;
+  }
+}
+section.projects .project.project-1 {
+  background: #ccc;
+}
+section.projects .project.project-2 {
+  background: #eee;
+}
+section.projects .project.project-3 {
+  background: #ddd;
+}
+section.projects .project .img-fixed {
+  height: 100%;
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  background-repeat: no-repeat !important;
+  background-size: 750px 750px !important;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0 auto;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+@media (max-width: 1440px) {
+  section.projects .project .img-fixed {
+    background-position: center right !important;
+    max-width: 100%;
+  }
+}
+section.projects .project .img-fixed.img-fixed-1 {
+  background: url(../img/icons/abbeys.webp);
+}
+section.projects .project .img-fixed.img-fixed-2 {
+  background: url(../img/icons/cp.webp);
+}
+section.projects .project .img-fixed.img-fixed-3 {
+  background: url(../img/icons/dww.webp);
+}
+@media (max-width: 1200px) {
+  section.projects .project .img-fixed {
+    display: none;
+  }
+}
+section.projects .project .section-content .col-left {
+  max-width: 330px;
+}
+@media (max-width: 1200px) {
+  section.projects .project .section-content .col-left {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+section.projects .project .section-content .col-right {
+  display: none;
+}
+@media (max-width: 1200px) {
+  section.projects .project .section-content .col-right {
+    display: block;
+  }
+  section.projects .project .section-content .col-right img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 footer {
-  height: 300px;
-  background-color: #4A5759;
+  height: 120px;
+  background-color: #000000;
 }/*# sourceMappingURL=main.css.map */
