@@ -349,6 +349,9 @@ button.menu-btn {
                             font-size: 36px;
                             color: #eddea4;
                             position: relative;
+                            @media(max-width:576px) {
+                                font-size: 25px;
+                            }
                             svg {
                                 width: 35px;
                                 height: 35px;

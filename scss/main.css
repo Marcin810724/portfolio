@@ -316,6 +316,11 @@ button.menu-btn:hover span {
   color: #eddea4;
   position: relative;
 }
+@media (max-width: 576px) {
+  .intro .block .bottom .content .title h1 span {
+    font-size: 25px;
+  }
+}
 .intro .block .bottom .content .title h1 span svg {
   width: 35px;
   height: 35px;
