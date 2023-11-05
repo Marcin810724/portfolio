@@ -251,6 +251,12 @@ button.menu-btn:hover span {
     right: 30px;
   }
 }
+@media (max-width: 991px) {
+  .intro .icon-rocket {
+    width: 60px;
+    height: 60px;
+  }
+}
 .intro .block {
   display: flex;
   flex-direction: column;
