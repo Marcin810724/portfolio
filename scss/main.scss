@@ -852,7 +852,52 @@ section.numbers {
 }
 
 section.projects {
+position: relative;
+.project-menu {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px #00000016;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+ 
+    ul {
+        padding: 30px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        li {
+            list-style: none;
+            a {
+                color: #000000;
+                text-decoration: none;
+                font-size: 13px;
+                margin-bottom: 15px;
+                display: block;
+            }
+        }
+         /* Styl paska przewijania */
+    &::-webkit-scrollbar {
+        width: 6px;
+        margin: 30px;
+    }
 
+    &::-webkit-scrollbar-thumb {
+        background: #000000; /* Kolor kciuka przewijania */
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Kolor toru przewijania */
+    }
+    }
+}
   .project {
     min-height: 700px;
     height: 100%;
@@ -894,7 +939,7 @@ section.projects {
         position: absolute;
         margin: 0 auto;
         background-repeat: no-repeat !important;
-        background-size: 750px 750px !important;
+        background-size: 800px !important;
         right: 0;
         left: 0;
         bottom: 0;
@@ -909,13 +954,19 @@ section.projects {
         }
 
         &.img-fixed-1 {
-            background: url(../img/icons/abbeys.webp);
+            background: url(../img/icons/nowatorska.png);
         }
         &.img-fixed-2 {
-        background: url(../img/icons/cp.webp);
+        background: url(../img/icons/saniwell.png);
         }
         &.img-fixed-3 {
-            background: url(../img/icons/dww.webp);
+            background: url(../img/icons/suasio.png);
+        }
+        &.img-fixed-4 {
+            background: url(../img/icons/mczdrowia.png);
+        }
+        &.img-fixed-5 {
+            background: url(../img/icons/iflsa.png);
         }
         @media(max-width:1200px) {
             display: none;
@@ -926,13 +977,27 @@ section.projects {
 
 .section-content{
     .col-left {
+        transform: translateX(-100px);
         max-width: 330px;
+        transition: 1s linear;
         @media(max-width:1200px) {
             text-align: center;
             margin: 0 auto;
         }
         .title {
           
+        }
+        &.active {
+            transform: translateX(0);
+            animation: visible-title 3s ease-in-out;
+        @keyframes visible-title {
+            0% {
+            opacity: 0;
+                }
+                100% {
+            opacity: 1;
+                }
+        }
         }
     }
 
@@ -957,6 +1022,52 @@ section.projects {
 }
 
 footer {
-    height: 120px;
+    // height: 120px;
     background-color: #000000;
+    padding: 30px 0;
+    .block {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:1200px) {
+            flex-direction: column;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            @media(max-width:1200px) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .title {
+                h3 {
+                    color: #FFFFFF;
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                    @media(max-width:1200px) {
+                       text-align: center;
+                    }
+                }
+            }
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 16px;
+                display: block;
+                margin-bottom: 15px;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                @media(max-width:1200px) {
+                       justify-content: center;
+                }
+                img {
+                    max-width: 20px;
+                    height: auto;
+                    margin-right: 10px;
+                    filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(16%) hue-rotate(209deg) brightness(104%) contrast(100%);
+                }
+            }
+        }
+    }
 }
