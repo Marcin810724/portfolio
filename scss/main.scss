@@ -377,6 +377,9 @@ section.hero {
     height: 100vh;
     overflow: hidden;
     box-shadow: 0 3px 6px #00000016;
+    @media(max-width:991px) {
+        height: calc(100vh - 60px);
+    }
 
     .arrow-down {
         position: absolute;

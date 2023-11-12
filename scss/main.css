@@ -321,6 +321,11 @@ section.hero {
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
 }
+@media (max-width: 991px) {
+  section.hero {
+    height: calc(100vh - 60px);
+  }
+}
 section.hero .arrow-down {
   position: absolute;
   right: 15px;
