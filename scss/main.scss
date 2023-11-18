@@ -79,6 +79,14 @@ header {
             @media(max-width:991px) {
                 height: 60px;
             }
+            svg {
+                width: 35px;
+                height: 35px;
+                @media (max-width: 1200px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
 
             h1 {
                 position: relative;

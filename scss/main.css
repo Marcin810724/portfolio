@@ -71,6 +71,16 @@ header .header-wrapper .logo {
     height: 60px;
   }
 }
+header .header-wrapper .logo svg {
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 1200px) {
+  header .header-wrapper .logo svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 header .header-wrapper .logo h1 {
   position: relative;
   z-index: 1;
