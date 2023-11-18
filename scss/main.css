@@ -97,6 +97,11 @@ header .header-wrapper .logo h1 a {
     font-size: 36px;
   }
 }
+@media (max-width: 576px) {
+  header .header-wrapper .logo h1 a {
+    font-size: 28px;
+  }
+}
 header .header-wrapper .menu-desctop {
   position: relative;
   z-index: 1;
