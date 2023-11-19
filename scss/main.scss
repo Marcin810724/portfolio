@@ -399,6 +399,12 @@ section.hero {
         height: calc(100vh - 60px);
     }
 
+
+   
+
+
+
+
     .arrow-down {
         position: absolute;
         right: 15px;
@@ -417,18 +423,27 @@ section.hero {
         width: 100%;
 
         .swiper-slide {
-
+position: relative;
+&::before {
+    content: '';
+    display: block;
+    background-color: #00000055;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
             .section-text {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
-                background: #000000ba;
                 padding: 5px 15px;
 
                 h1 {
-                    color: var(--color-yellow);
+                    color: #FFFFFF;
                     font-size: 72px;
                     text-transform: uppercase;
                     text-align: center;
@@ -490,6 +505,7 @@ section.hero {
             object-position: center center;
             height: 100%;
             width: 100%;
+           
         }
     }
 
