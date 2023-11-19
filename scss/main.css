@@ -607,6 +607,7 @@ section.about .block .left .content .title {
   left: 0;
   top: 0;
   width: 120px;
+  height: 100%;
   background-color: var(--color-yellow);
   padding: 15px 0;
   display: flex;
@@ -1169,6 +1170,26 @@ footer .block .column a img {
 }
 
 /** Body Overlay **/
+body #load {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9901;
+  opacity: 1;
+  background-color: #FFFFFF;
+  visibility: visible;
+  transition: all 0.35s ease-out;
+}
+
+body #load.loader-removed {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .loader {
   border: 10px solid #f3f3f3;
   border-top: 10px solid #000000;
@@ -1179,6 +1200,11 @@ footer .block .column a img {
   position: fixed;
   top: 50%;
   left: calc(50% - 35px);
+  transition: all 0.35s ease-out;
+}
+.loader.loader-removed {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes spin {
