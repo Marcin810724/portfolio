@@ -283,23 +283,6 @@ button.menu-btn:hover span {
   width: 100%;
 }
 
-.title h1 {
-  font-size: 65px;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-@media (max-width: 1200px) {
-  .title h1 {
-    font-size: 36px;
-    text-align: center;
-  }
-}
-@media (max-width: 576px) {
-  .title h1 {
-    font-size: 34px;
-  }
-}
-
 .title h2 {
   font-size: 36px;
   font-weight: 700;
@@ -391,25 +374,50 @@ section.hero .swiper .swiper-slide .section-text {
   z-index: 1;
   padding: 5px 15px;
 }
-section.hero .swiper .swiper-slide .section-text h1 {
+section.hero .swiper .swiper-slide .section-text h1.typing-hero {
   color: #FFFFFF;
   font-size: 72px;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
+  animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 @media (max-width: 1200px) {
-  section.hero .swiper .swiper-slide .section-text h1 {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
     font-size: 60px;
   }
 }
 @media (max-width: 991px) {
-  section.hero .swiper .swiper-slide .section-text h1 {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
     font-size: 55px;
   }
 }
 @media (max-width: 576px) {
-  section.hero .swiper .swiper-slide .section-text h1 {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
     font-size: 36px;
+  }
+}
+@media (max-width: 460px) {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
+    font-size: 28px;
+  }
+}
+@media (max-width: 360px) {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
+    font-size: 26px;
   }
 }
 section.hero .swiper .swiper-slide .section-text h2 {
@@ -417,6 +425,7 @@ section.hero .swiper .swiper-slide .section-text h2 {
   font-size: 55px;
   text-align: center;
   font-weight: 300;
+  position: relative;
 }
 @media (max-width: 1200px) {
   section.hero .swiper .swiper-slide .section-text h2 {
@@ -432,6 +441,17 @@ section.hero .swiper .swiper-slide .section-text h2 {
   section.hero .swiper .swiper-slide .section-text h2 {
     font-size: 30px;
   }
+}
+section.hero .swiper .swiper-slide .section-text h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 section.hero .img-hero {
   width: calc(100% - 60px);
@@ -589,7 +609,6 @@ section.about .block .left .content .title {
   width: 120px;
   background-color: var(--color-yellow);
   padding: 15px 0;
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -1150,34 +1169,23 @@ footer .block .column a img {
 }
 
 /** Body Overlay **/
-body #load {
-  display: block;
-  height: 100%;
-  overflow: hidden;
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #000000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9901;
-  opacity: 1;
-  background-color: #FFFFFF;
-  visibility: visible;
-  transition: all 0.35s ease-out;
+  top: 50%;
+  left: calc(50% - 35px);
 }
 
-body #load.loader-removed {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.spinner-loader .load-wrap {
-  background-image: url("../img/loader.gif");
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=main.css.map */

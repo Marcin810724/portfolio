@@ -16,10 +16,7 @@
 
 <body>
 
-    <div id="load" class="spinner-loader">
-        <div class="load-wrap">
-            <img src="/app/themes/test/assets/src/img/loader.gif" alt="">
-        </div>
+    <div id="load" class="spinner-loader loader">
     </div>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -96,7 +93,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="section-text">
-                            <h1> Marcin Ścieszkowski</h1>
+                            <h1 class="typing-hero"> Marcin Ścieszkowski</h1>
                             <h2>Frontend developer</h2>
                         </div>
                         <img src="img/img/slide1.jpg" alt="komputer">
@@ -128,13 +125,13 @@
             <div class="block">
                 <div class="left">
                     <div class="content">
-                        <div class="title">
-                            <h2>O mnie</h2>
+                        <div class="title animate">
+                            <h2 class="aniumate">O mnie</h2>
                         </div>
-                        <div class="image"><img src="img/person/about.jpg" alt="Marcin Ścieszkowski"></div>
+                        <div class="image animate"><img src="img/person/about.jpg" alt="Marcin Ścieszkowski"></div>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right animate">
                     <div class="content">
                         <div class="text">
                             <p>Mam 42 lata. Studiowałem Intormatykę i <strong>Ekonometrię na Akademii Ekonomicznej w
@@ -506,9 +503,13 @@
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".mySwiper", {
-                pagination: {
-                    el: '.swiper-pagination',
-                },
+                slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
             });
         </script>
     </footer>
