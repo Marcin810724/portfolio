@@ -507,6 +507,7 @@ section.hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bull
 
 section.about {
   padding-top: 100px;
+  overflow: hidden;
 }
 section.about .block {
   display: flex;
