@@ -730,74 +730,113 @@ section.about .cv-content .content .title h2::after {
 section.about .cv-content .content .text p {
   color: var(--color-grey);
 }
-section.about .cv-content .block-cv {
+section.about .cv-content .wrapper-content-cv {
+  position: relative;
+}
+section.about .cv-content .wrapper-content-cv::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transition: 3s linear;
+}
+section.about .cv-content .wrapper-content-cv.active::before {
+  height: 100%;
+}
+section.about .cv-content .wrapper-content-cv .block-cv {
   display: flex;
   justify-content: space-between;
   max-width: 720px;
   margin: 0 auto;
   position: relative;
 }
-section.about .cv-content .block-cv:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 0;
-  background-color: #FFFFFF;
-  top: 0;
-  transition: 1.5s linear;
-}
-section.about .cv-content .block-cv.active:after {
+section.about .cv-content .wrapper-content-cv .block-cv.active:after {
   height: 100%;
 }
-section.about .cv-content .block-cv.active .left::after {
+section.about .cv-content .wrapper-content-cv .block-cv.active .left::after {
   background-color: var(--color-yellow);
+  border: 1px solid #000000;
+  opacity: 1;
+  transform: translateY(0);
 }
-section.about .cv-content .block-cv .left,
-section.about .cv-content .block-cv .right {
+section.about .cv-content .wrapper-content-cv .block-cv.active .left h3 {
+  transform: translateX(0);
+}
+section.about .cv-content .wrapper-content-cv .block-cv.active .left p {
+  transform: translateX(0);
+}
+section.about .cv-content .wrapper-content-cv .block-cv.active .right h3 {
+  transform: translateX(0);
+}
+section.about .cv-content .wrapper-content-cv .block-cv.active .right p {
+  transform: translateX(0);
+}
+section.about .cv-content .wrapper-content-cv .block-cv .left,
+section.about .cv-content .wrapper-content-cv .block-cv .right {
   width: 50%;
   padding: 60px 0;
 }
-section.about .cv-content .block-cv .left h3,
-section.about .cv-content .block-cv .right h3 {
+section.about .cv-content .wrapper-content-cv .block-cv .left h3,
+section.about .cv-content .wrapper-content-cv .block-cv .right h3 {
   color: var(--color-yellow);
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 20px;
   font-weight: bold;
+  transition: 1.5s linear;
 }
-section.about .cv-content .block-cv .left p,
-section.about .cv-content .block-cv .right p {
+section.about .cv-content .wrapper-content-cv .block-cv .left p,
+section.about .cv-content .wrapper-content-cv .block-cv .right p {
   font-size: 14px;
   color: #FFFFFF;
   font-weight: 300;
+  transition: 1.5s linear;
 }
-section.about .cv-content .block-cv .left {
+section.about .cv-content .wrapper-content-cv .block-cv .left {
   text-align: right;
   padding-right: 15px;
   position: relative;
 }
-section.about .cv-content .block-cv .left:after {
+section.about .cv-content .wrapper-content-cv .block-cv .left h3 {
+  transform: translateX(-80px);
+}
+section.about .cv-content .wrapper-content-cv .block-cv .left p {
+  transform: translateX(-80px);
+  transition: 1.5s linear;
+}
+section.about .cv-content .wrapper-content-cv .block-cv .left:after {
   content: "";
   position: absolute;
-  right: -6px;
+  right: -8px;
   width: 12px;
   height: 12px;
-  background-color: var(--color-yellow);
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
   border-radius: 50%;
   top: 60px;
   z-index: 1;
-  transition: 1.5s linear;
+  transition: 3s linear;
+  opacity: 0;
+  transform: translateY(-120px);
 }
-section.about .cv-content .block-cv .right {
+section.about .cv-content .wrapper-content-cv .block-cv .right {
   text-align: left;
   padding-left: 15px;
 }
-section.about .cv-content .block-cv:first-child {
+section.about .cv-content .wrapper-content-cv .block-cv .right h3 {
+  transform: translateX(80px);
+}
+section.about .cv-content .wrapper-content-cv .block-cv .right p {
+  transform: translateX(80px);
+}
+section.about .cv-content .wrapper-content-cv .block-cv:first-child {
   padding-top: 100px;
 }
-section.about .cv-content .block-cv:first-child {
+section.about .cv-content .wrapper-content-cv .block-cv:first-child {
   padding-top: 0;
 }
 
