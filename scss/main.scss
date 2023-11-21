@@ -463,13 +463,54 @@ section.hero {
 
     .arrow-down {
         position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        border: 1px solid #58565a;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        animation: bounce-scroll 2.1s linear infinite;
+
+        @media(max-width:1200px) {
+            border: none;
+            background-color: transparent;
+        }
 
         svg {
-            height: 120px;
+            width: 24px;
+            height: 24px;
             fill: #ffffff;
+
+            @media(max-width:1200px) {
+                fill: #000000;
+            }
+        }
+
+        @keyframes bounce-scroll {
+            0% {
+                transform: translate(-50%, 0)
+            }
+
+            10% {
+                transform: translate(-50%, 0)
+            }
+
+            30% {
+                transform: translate(-50%, 10px)
+            }
+
+            50% {
+                transform: translate(-50%, 0)
+            }
+
+            100% {
+                transform: translate(-50%, 0)
+            }
         }
     }
 
@@ -622,11 +663,13 @@ section.hero {
         align-items: center;
         justify-content: center;
 
+
         .swiper-pagination-bullet {
             background: var(--color-black);
             width: 10px;
             height: 10px;
             opacity: 1;
+            display: none;
 
             &.swiper-pagination-bullet-active {
                 background: var(--color-purple);
@@ -1197,7 +1240,7 @@ section.projects {
             position: absolute;
             bottom: -145px;
             left: 0;
-            z-index: 99999;
+            // z-index: 99999;
             transition: 0.6s linear;
             text-transform: uppercase;
             border-right: 1px solid #000000;
@@ -1329,7 +1372,6 @@ section.projects {
             background-size: 70% !important;
             right: 0;
             left: 0;
-            z-index: 99999;
             bottom: 0;
             top: 0;
             background-position: right !important;
@@ -1466,6 +1508,95 @@ section.projects {
     }
 
 
+}
+
+section.technology {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width:991px) {
+        padding-bottom: 100px;
+    }
+
+    .big-head {
+        h2 {
+            opacity: 0.1;
+            font-size: 170px;
+            color: #000000;
+            transform: translateY(-50%);
+            font-family: var(--font-inter);
+            position: absolute;
+            bottom: -145px;
+            left: 0;
+            // z-index: 99999;
+            transition: 0.6s linear;
+            text-transform: uppercase;
+            border-right: 1px solid #000000;
+            text-align: center;
+            width: 100%;
+
+            @media(max-width:1030px) {
+                font-size: 120px;
+                bottom: -102px;
+            }
+
+            @media(max-width:905px) {
+                font-size: 90px;
+                bottom: -80px;
+            }
+
+            @media(max-width:675px) {
+                font-size: 75px;
+                bottom: -60px;
+            }
+
+            @media(max-width:550px) {
+                font-size: 60px;
+                bottom: -50px;
+            }
+
+            @media(max-width:445px) {
+                font-size: 45px;
+                bottom: -38px;
+            }
+
+            @media(max-width:340px) {
+                font-size: 38px;
+                bottom: -32px;
+            }
+        }
+    }
+
+    .swiper {
+        .swiper-slide {
+            position: relative;
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                min-height: 120px;
+
+                img {
+                    max-width: 120px;
+                    height: auto;
+                }
+
+            }
+
+            .text {
+                text-align: center;
+                font-weight: 600;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+
+
+    }
 }
 
 footer {

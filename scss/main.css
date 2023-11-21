@@ -397,13 +397,51 @@ section.hero {
 }
 section.hero .arrow-down {
   position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border: 1px solid #58565a;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  animation: bounce-scroll 2.1s linear infinite;
+}
+@media (max-width: 1200px) {
+  section.hero .arrow-down {
+    border: none;
+    background-color: transparent;
+  }
 }
 section.hero .arrow-down svg {
-  height: 120px;
+  width: 24px;
+  height: 24px;
   fill: #ffffff;
+}
+@media (max-width: 1200px) {
+  section.hero .arrow-down svg {
+    fill: #000000;
+  }
+}
+@keyframes bounce-scroll {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  10% {
+    transform: translate(-50%, 0);
+  }
+  30% {
+    transform: translate(-50%, 10px);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 section.hero .swiper {
   height: 100%;
@@ -556,6 +594,7 @@ section.hero .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   opacity: 1;
+  display: none;
 }
 section.hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color-purple);
@@ -1045,7 +1084,6 @@ section.projects .big-head h2 {
   position: absolute;
   bottom: -145px;
   left: 0;
-  z-index: 99999;
   transition: 0.6s linear;
   text-transform: uppercase;
   border-right: 1px solid #000000;
@@ -1164,7 +1202,6 @@ section.projects .project .img-fixed {
   background-size: 70% !important;
   right: 0;
   left: 0;
-  z-index: 99999;
   bottom: 0;
   top: 0;
   background-position: right !important;
@@ -1270,6 +1307,89 @@ section.projects .project .section-content .col-right {
   section.projects .project .section-content .col-right .section-buttons a.btn {
     min-width: 250px;
   }
+}
+
+section.technology {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  section.technology {
+    padding-bottom: 100px;
+  }
+}
+section.technology .big-head h2 {
+  opacity: 0.1;
+  font-size: 170px;
+  color: #000000;
+  transform: translateY(-50%);
+  font-family: var(--font-inter);
+  position: absolute;
+  bottom: -145px;
+  left: 0;
+  transition: 0.6s linear;
+  text-transform: uppercase;
+  border-right: 1px solid #000000;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1030px) {
+  section.technology .big-head h2 {
+    font-size: 120px;
+    bottom: -102px;
+  }
+}
+@media (max-width: 905px) {
+  section.technology .big-head h2 {
+    font-size: 90px;
+    bottom: -80px;
+  }
+}
+@media (max-width: 675px) {
+  section.technology .big-head h2 {
+    font-size: 75px;
+    bottom: -60px;
+  }
+}
+@media (max-width: 550px) {
+  section.technology .big-head h2 {
+    font-size: 60px;
+    bottom: -50px;
+  }
+}
+@media (max-width: 445px) {
+  section.technology .big-head h2 {
+    font-size: 45px;
+    bottom: -38px;
+  }
+}
+@media (max-width: 340px) {
+  section.technology .big-head h2 {
+    font-size: 38px;
+    bottom: -32px;
+  }
+}
+section.technology .swiper .swiper-slide {
+  position: relative;
+}
+section.technology .swiper .swiper-slide .icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  min-height: 120px;
+}
+section.technology .swiper .swiper-slide .icon img {
+  max-width: 120px;
+  height: auto;
+}
+section.technology .swiper .swiper-slide .text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 footer {
