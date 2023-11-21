@@ -162,3 +162,11 @@ window.addEventListener('scroll', function () {
     bottomCta.classList.remove('active')
   }
 });
+
+
+
+// Funkcja, która zostanie wywołana po pełnym wczytaniu strony
+function onPageLoad() {
+  document.body.classList.add('load');
+}
+window.addEventListener('load', onPageLoad);
