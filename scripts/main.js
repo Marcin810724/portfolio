@@ -153,3 +153,12 @@ function testScroll() {
 
 
 
+window.addEventListener('scroll', function () {
+  var bottomCta = document.querySelector('.bottom-cta');
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 1) {
+    bottomCta.classList.add('active')
+  } else {
+    bottomCta.classList.remove('active')
+  }
+});

@@ -123,6 +123,7 @@ header .header-wrapper .menu-desctop ul {
 }
 header .header-wrapper .menu-desctop ul li {
   margin-right: 30px;
+  list-style: none;
 }
 header .header-wrapper .menu-desctop ul li:last-child {
   margin-right: 0;
@@ -466,6 +467,11 @@ section.hero .swiper .swiper-slide .section-text h1.typing-hero {
     font-size: 55px;
   }
 }
+@media (max-width: 767px) {
+  section.hero .swiper .swiper-slide .section-text h1.typing-hero {
+    font-size: 45px;
+  }
+}
 @media (max-width: 576px) {
   section.hero .swiper .swiper-slide .section-text h1.typing-hero {
     font-size: 36px;
@@ -500,7 +506,7 @@ section.hero .swiper .swiper-slide .section-text h2 {
 }
 @media (max-width: 576px) {
   section.hero .swiper .swiper-slide .section-text h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 section.hero .swiper .swiper-slide .section-text h2::after {
@@ -1257,6 +1263,11 @@ footer {
   background-color: #000000;
   padding: 30px 0;
 }
+@media (max-width: 1200px) {
+  footer {
+    margin-bottom: 45px;
+  }
+}
 footer .block {
   display: flex;
   justify-content: space-between;
@@ -1354,4 +1365,49 @@ body #load.loader-removed {
   100% {
     transform: rotate(360deg);
   }
+}
+.bottom-cta {
+  height: 45px;
+  background-color: #FFFFFF;
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+  transition: 0.2s linear;
+  transform: translateY(100%);
+}
+@media (max-width: 1200px) {
+  .bottom-cta.active {
+    transform: translateY(0);
+  }
+}
+.bottom-cta a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px 25px;
+  transition: 0.2s linear;
+}
+.bottom-cta a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transition: 0.2s linear;
+}
+.bottom-cta a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.bottom-cta a:hover svg {
+  fill: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
