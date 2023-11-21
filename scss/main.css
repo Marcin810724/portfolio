@@ -339,6 +339,18 @@ button.menu-btn:hover span {
     padding: 15px 20px;
   }
 }
+@media (max-width: 500px) {
+  .section.buttons a.btn {
+    padding: 12px 18px !important;
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 360px) {
+  .section.buttons a.btn {
+    padding: 10px 15px !important;
+    font-size: 13px !important;
+  }
+}
 .section.buttons a.btn.btn-black {
   border-color: transparent;
   background-color: #000000;
@@ -558,6 +570,16 @@ section.about {
   padding-top: 150px;
   overflow: hidden;
 }
+@media (max-width: 1200px) {
+  section.about {
+    padding-top: 65px;
+  }
+}
+@media (max-width: 991px) {
+  section.about {
+    padding-top: 50px;
+  }
+}
 section.about .block {
   display: flex;
   justify-content: space-between;
@@ -589,8 +611,29 @@ section.about .block .big-head h2 {
   z-index: 1;
   transition: 0.6s linear;
 }
+@media (max-width: 1200px) {
+  section.about .block .big-head h2 {
+    bottom: -123px;
+    font-size: 90px;
+  }
+}
 section.about .block .big-head.active h2 {
   top: -58px;
+}
+@media (max-width: 1200px) {
+  section.about .block .big-head.active h2 {
+    top: unset;
+    writing-mode: unset;
+    transform: translateX(-50%) rotate(0);
+    left: 50%;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  section.about .block .big-head.active h2 {
+    font-size: 80px;
+  }
 }
 section.about .block .left {
   width: 48%;
@@ -607,12 +650,25 @@ section.about .block .left .content {
 @media (max-width: 1200px) {
   section.about .block .left .content {
     height: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 section.about .block .left .content .image {
   height: 550px;
   width: 470px;
   position: relative;
+}
+@media (max-width: 1200px) {
+  section.about .block .left .content .image {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991px) {
+  section.about .block .left .content .image {
+    height: auto;
+    width: auto;
+  }
 }
 section.about .block .left .content .image img {
   -o-object-fit: cover;
@@ -626,7 +682,8 @@ section.about .block .left .content .image img {
   section.about .block .left .content .image img {
     -o-object-fit: unset;
        object-fit: unset;
-    max-width: 767px;
+    width: auto;
+    max-width: 100%;
     height: auto;
   }
 }
@@ -640,6 +697,17 @@ section.about .block .left .content .image:after {
   top: -50px;
   background: rgba(0, 0, 0, 0.6117647059);
   z-index: -1;
+}
+@media (max-width: 1200px) {
+  section.about .block .left .content .image:after {
+    left: 15px;
+    top: -15px;
+  }
+}
+@media (max-width: 991px) {
+  section.about .block .left .content .image:after {
+    display: none;
+  }
 }
 section.about .block .right {
   width: 48%;
@@ -734,7 +802,6 @@ section.about .cv-content .wrapper-content-cv .block-cv {
   justify-content: space-between;
   max-width: 860px;
   margin: 0 auto;
-  position: relative;
 }
 section.about .cv-content .wrapper-content-cv .block-cv.active:after {
   height: 100%;
@@ -774,12 +841,24 @@ section.about .cv-content .wrapper-content-cv .block-cv .right h3 {
   background-color: var(--color-purple-dark);
   display: inline-block;
 }
+@media (max-width: 360px) {
+  section.about .cv-content .wrapper-content-cv .block-cv .left h3,
+  section.about .cv-content .wrapper-content-cv .block-cv .right h3 {
+    font-size: 16px;
+  }
+}
 section.about .cv-content .wrapper-content-cv .block-cv .left p,
 section.about .cv-content .wrapper-content-cv .block-cv .right p {
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 300;
   transition: 1.5s linear;
+}
+@media (max-width: 360px) {
+  section.about .cv-content .wrapper-content-cv .block-cv .left p,
+  section.about .cv-content .wrapper-content-cv .block-cv .right p {
+    font-size: 13px;
+  }
 }
 section.about .cv-content .wrapper-content-cv .block-cv .left {
   text-align: right;
@@ -834,9 +913,34 @@ section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
   font-family: var(--font-inter);
   position: absolute;
   top: 70px;
-  right: -180px;
+  right: 0;
   z-index: 1;
   transition: 0.6s linear;
+}
+@media (max-width: 1200px) {
+  section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
+    writing-mode: unset;
+    transform: translateX(-50%) rotate(0);
+    top: unset;
+    left: 50%;
+    bottom: -120px;
+    font-size: 90px;
+    text-align: center;
+    display: block;
+    right: unset;
+  }
+}
+@media (max-width: 1200px) {
+  section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
+    transform: translateX(0) rotate(0);
+    font-size: 90px;
+    left: -15px;
+  }
+}
+@media (max-width: 360px) {
+  section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
+    font-size: 80px;
+  }
 }
 
 section.numbers {

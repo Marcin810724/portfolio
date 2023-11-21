@@ -388,6 +388,16 @@ button.menu-btn {
                 padding: 15px 20px;
             }
 
+            @media(max-width:500px) {
+                padding: 12px 18px !important;
+                font-size: 16px !important;
+            }
+
+            @media(max-width:360px) {
+                padding: 10px 15px !important;
+                font-size: 13px !important;
+            }
+
             &.btn-black {
                 border-color: transparent;
                 background-color: #000000;
@@ -630,6 +640,13 @@ section.about {
     padding-top: 150px;
     overflow: hidden;
 
+    @media(max-width: 1200px) {
+        padding-top: 65px;
+    }
+
+    @media(max-width: 991px) {
+        padding-top: 50px;
+    }
 
 
     .block {
@@ -663,13 +680,33 @@ section.about {
                 left: 0;
                 z-index: 1;
                 transition: .6s linear;
+
+                @media(max-width:1200px) {
+                    bottom: -123px;
+                    font-size: 90px;
+                }
             }
 
             &.active {
                 h2 {
                     top: -58px;
+
+                    @media(max-width: 1200px) {
+                        top: unset;
+                        writing-mode: unset;
+                        transform: translateX(-50%) rotate(0);
+                        left: 50%;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    @media(max-width: 360px) {
+                        font-size: 80px;
+                    }
                 }
             }
+
+
         }
 
         .left {
@@ -685,6 +722,8 @@ section.about {
 
                 @media(max-width:1200px) {
                     height: auto;
+                    display: flex;
+                    justify-content: center;
                 }
 
 
@@ -694,6 +733,14 @@ section.about {
                     width: 470px;
                     position: relative;
 
+                    @media(max-width: 1200px) {
+                        margin-bottom: 30px;
+                    }
+
+                    @media(max-width: 991px) {
+                        height: auto;
+                        width: auto;
+                    }
 
 
                     img {
@@ -702,9 +749,10 @@ section.about {
                         width: 100%;
                         object-position: top center;
 
-                        @media(max-width:991px) {
+                        @media(max-width: 991px) {
                             object-fit: unset;
-                            max-width: 767px;
+                            width: auto;
+                            max-width: 100%;
                             height: auto;
                         }
                     }
@@ -719,6 +767,15 @@ section.about {
                         top: -50px;
                         background: #0000009c;
                         z-index: -1;
+
+                        @media(max-width: 1200px) {
+                            left: 15px;
+                            top: -15px;
+                        }
+
+                        @media(max-width: 991px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -843,7 +900,7 @@ section.about {
                 justify-content: space-between;
                 max-width: 860px;
                 margin: 0 auto;
-                position: relative;
+                // position: relative;
 
                 &.active {
                     &:after {
@@ -895,6 +952,10 @@ section.about {
                         transition: 1.5s linear;
                         background-color: var(--color-purple-dark);
                         display: inline-block;
+
+                        @media(max-width:360px) {
+                            font-size: 16px;
+                        }
                     }
 
                     p {
@@ -902,6 +963,10 @@ section.about {
                         color: #FFFFFF;
                         font-weight: 300;
                         transition: 1.5s linear;
+
+                        @media(max-width:360px) {
+                            font-size: 13px;
+                        }
                     }
                 }
 
@@ -969,9 +1034,31 @@ section.about {
                         font-family: var(--font-inter);
                         position: absolute;
                         top: 70px;
-                        right: -180px;
+                        right: 0;
                         z-index: 1;
                         transition: .6s linear;
+
+                        @media(max-width: 1200px) {
+                            writing-mode: unset;
+                            transform: translateX(-50%) rotate(0);
+                            top: unset;
+                            left: 50%;
+                            bottom: -120px;
+                            font-size: 90px;
+                            text-align: center;
+                            display: block;
+                            right: unset;
+                        }
+
+                        @media(max-width: 1200px) {
+                            transform: translateX(0) rotate(0);
+                            font-size: 90px;
+                            left: -15px;
+                        }
+
+                        @media(max-width: 360px) {
+                            font-size: 80px;
+                        }
                     }
                 }
             }
