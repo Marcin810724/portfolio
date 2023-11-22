@@ -86,6 +86,13 @@
                                     <path
                                         d="M96 128V70.2c0-13.3 8.3-25.3 20.8-30l96-36c7.2-2.7 15.2-2.7 22.5 0l96 36c12.5 4.7 20.8 16.6 20.8 30V128h-.3c.2 2.6 .3 5.3 .3 8v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V136c0-2.7 .1-5.4 .3-8H96zm48 48c0 44.2 35.8 80 80 80s80-35.8 80-80V160H144v16zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6zM208 48V64H192c-4.4 0-8 3.6-8 8V88c0 4.4 3.6 8 8 8h16v16c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V96h16c4.4 0 8-3.6 8-8V72c0-4.4-3.6-8-8-8H240V48c0-4.4-3.6-8-8-8H216c-4.4 0-8 3.6-8 8z" />
                                 </svg>O mnie</a></li>
+
+
+
+
+
+
+
                         <li><a href="#projects"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                                     <path
@@ -107,7 +114,11 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
+
                         <div class="section-text">
+                            <div class="section-img">
+                                <img src="./img/person/marcin.webp" alt="Marcin Ścieszkowski - web developer">
+                            </div>
                             <h1 class="typing-hero"> Marcin Ścieszkowski</h1>
                             <h2>Frontend developer</h2>
                         </div>
@@ -293,15 +304,6 @@
     </section>
 
     <section id="projects" class="projects">
-        <!-- <div class="project-menu">
-            <ul>
-                <li><a href="#project-1">Nowatorska</a></li>
-                <li><a href="#project-2">Saniwell</a></li>
-                <li><a href="#project-3">Suasio</a></li>
-                <li><a href="#project-4">MCZ</a></li>
-                <li><a href="#project-5">IFL</a></li>
-            </ul>          
-        </div> -->
         <div id="project-1" class="project project-1">
             <div class="big-head">
                 <h2>Nowatorska</h2>
@@ -475,6 +477,10 @@
                             <div class="text">PHP</div>
                         </div>
                         <div class="swiper-slide">
+                            <div class="icon"><img src="./img/icons/git.png" alt="Git"></div>
+                            <div class="text">Git</div>
+                        </div>
+                        <div class="swiper-slide">
                             <div class="icon"><img src="./img/icons/css.png" alt="CSS"></div>
                             <div class="text">CSS</div>
                         </div>
@@ -613,8 +619,9 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 1000, // Opóźnienie w milisekundach między slajdami
-                    disableOnInteraction: false, // Nie zatrzymuj przewijania po interakcji użytkownika
+                    delay: 1000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 },
                 navigation: {
                     nextEl: ".swiper-button-next",

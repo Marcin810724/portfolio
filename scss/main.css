@@ -41,7 +41,6 @@ header {
   background: #000;
   height: 60px;
   max-width: 1920px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
 }
 @media (max-width: 991px) {
   header {
@@ -51,7 +50,8 @@ header {
 header .header-wrapper {
   padding: 0 60px;
   display: flex;
-  background-color: var(--color-black);
+  justify-content: flex-end;
+  background-color: #FFFFFF;
 }
 @media (max-width: 1660px) {
   header .header-wrapper {
@@ -68,6 +68,7 @@ header .header-wrapper .logo {
   height: 60px;
   display: flex;
   align-items: center;
+  display: none;
 }
 @media (max-width: 991px) {
   header .header-wrapper .logo {
@@ -106,7 +107,10 @@ header .header-wrapper .logo a {
 header .header-wrapper .menu-desctop {
   position: relative;
   z-index: 1;
-  width: calc(100% - 320px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 60px;
 }
 @media (max-width: 991px) {
   header .header-wrapper .menu-desctop {
@@ -115,7 +119,7 @@ header .header-wrapper .menu-desctop {
 }
 header .header-wrapper .menu-desctop ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -127,7 +131,7 @@ header .header-wrapper .menu-desctop ul li:last-child {
   margin-right: 0;
 }
 header .header-wrapper .menu-desctop ul li a {
-  color: #FFFFFF;
+  color: #000000;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -137,11 +141,15 @@ header .header-wrapper .menu-desctop ul li a {
 }
 header .header-wrapper .menu-desctop ul li a svg {
   height: 15px;
-  fill: #FFFFFF;
+  fill: #000000;
   margin-right: 5px;
+  transition: 0.2s linear;
 }
 header .header-wrapper .menu-desctop ul li a:hover {
-  opacity: 0.6;
+  color: var(--color-purple);
+}
+header .header-wrapper .menu-desctop ul li a:hover svg {
+  fill: var(--color-purple);
 }
 header .header-wrapper .menu-desctop ul li::marker {
   display: none;
@@ -155,6 +163,7 @@ header .header-wrapper:after {
   left: 0;
   top: 0;
   background-color: #FFFFFF;
+  display: none;
 }
 @media (max-width: 991px) {
   header .header-wrapper:after {
@@ -410,7 +419,7 @@ section.hero .arrow-down {
   background-color: #000000;
   animation: bounce-scroll 2.1s linear infinite;
 }
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   section.hero .arrow-down {
     border: none;
     background-color: transparent;
@@ -421,7 +430,7 @@ section.hero .arrow-down svg {
   height: 24px;
   fill: #ffffff;
 }
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   section.hero .arrow-down svg {
     fill: #000000;
   }
@@ -553,6 +562,20 @@ section.hero .swiper .swiper-slide .section-text h2::after {
   left: 50%;
   transform: translateX(-50%);
 }
+section.hero .swiper .swiper-slide .section-text .section-img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 30px;
+}
+section.hero .swiper .swiper-slide .section-text .section-img img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
 section.hero .img-hero {
   width: calc(100% - 60px);
   height: calc(100% - 120px);
@@ -565,7 +588,7 @@ section.hero .img-hero {
     width: calc(100% - 36px);
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   section.hero .img-hero {
     width: 100%;
     height: 100%;
@@ -599,7 +622,7 @@ section.hero .swiper-pagination .swiper-pagination-bullet {
 section.hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color-purple);
 }
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   section.hero .swiper-pagination {
     width: 100%;
     height: 50px;
@@ -1417,6 +1440,7 @@ section.technology .swiper .swiper-slide .icon img {
   height: auto;
   filter: grayscale(1);
   opacity: 0.6;
+  transition: 0.2s linear;
 }
 section.technology .swiper .swiper-slide .text {
   text-align: center;
@@ -1429,6 +1453,10 @@ section.technology .swiper .swiper-slide .text {
   section.technology .swiper .swiper-slide .text {
     font-size: 14px;
   }
+}
+section.technology .swiper .swiper-slide:hover .icon img {
+  filter: grayscale(0);
+  opacity: 1;
 }
 section.technology .content-slides-technology {
   position: relative;
@@ -1500,6 +1528,7 @@ footer .block .column a {
   font-weight: 300;
   display: flex;
   align-items: center;
+  transition: 0.2s linear;
 }
 @media (max-width: 1200px) {
   footer .block .column a {
@@ -1511,6 +1540,9 @@ footer .block .column a img {
   height: auto;
   margin-right: 10px;
   filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(16%) hue-rotate(209deg) brightness(104%) contrast(100%);
+}
+footer .block .column a:hover {
+  opacity: 0.6;
 }
 
 /** Body Overlay **/
@@ -1535,8 +1567,8 @@ body #load.loader-removed {
 }
 
 .loader {
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid #000000;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--color-purple);
   border-radius: 50%;
   width: 60px;
   height: 60px;
