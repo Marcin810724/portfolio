@@ -334,7 +334,7 @@
                         <h2>Saniwell - Wnętrza pod klucz</h2>
                     </div>
                     <div class="text">
-                        <p>Strona prezentująca ofertę wnetrz pod klucz</p>
+                        <p>Strona prezentująca ofertę wnętrz pod klucz</p>
                     </div>
                     <div class="section-buttons">
                         <a class="btn btn-black" target="_blank" href="https://saniwell.pl">Zobacz on-line</a>
@@ -595,11 +595,9 @@
 
 
         <script>
-            //     // Pobierz wszystkie sekcje "project-X" i odpowiadające elementy "col-left"
             const projects = document.querySelectorAll('.project .col-left');
             const colLeftProjects = document.querySelectorAll('.col-left');
 
-            // Funkcja sprawdzająca widoczność sekcji i dodająca/usuwająca klasę "active"
             function checkVisibility() {
                 projects.forEach((project, index) => {
                     const colLeft = colLeftProjects[index];
@@ -612,39 +610,26 @@
                     }
                 });
             }
-
-            // Dodatkowo, uruchom sprawdzenie po załadowaniu strony
             window.addEventListener('load', checkVisibility);
-
-            // Ustal, kiedy ma być wywoływana funkcja sprawdzania widoczności podczas scrollowania
             window.addEventListener('scroll', checkVisibility);
         </script>
 
         <script>
-            // Funkcja, która sprawdza, czy sekcja "projects" jest widoczna w widoku przeglądarki
             function isProjectsInView() {
                 const projectsSection = document.querySelector('#projects');
                 const menu = document.querySelector('.project-menu');
                 const rect = projectsSection.getBoundingClientRect();
 
                 if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                    // Wyświetl menu, gdy sekcja jest w viewport
                     menu.style.display = 'block';
                 } else {
-                    // Ukryj menu, gdy sekcja nie jest w viewport
                     menu.style.display = 'none';
                 }
             }
-
-            // Nasłuchuj zdarzenie scroll, aby sprawdzać, czy sekcja jest widoczna
             window.addEventListener('scroll', isProjectsInView);
-
-            // Dodatkowo, uruchom sprawdzenie po załadowaniu strony
             window.addEventListener('load', isProjectsInView);
         </script>
 
-
-        <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".mySwiper-technology", {
                 slidesPerView: 5,

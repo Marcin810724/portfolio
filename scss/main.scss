@@ -62,6 +62,10 @@ header {
         left: 0;
         top: 0;
 
+        @media(max-width:1070px) {
+            width: 45%;
+        }
+
         @media(max-width:991px) {
             width: 100%;
         }
@@ -871,7 +875,7 @@ section.about {
                         position: absolute;
                         left: 50px;
                         top: -50px;
-                        background: #0000009c;
+                        background: #b4b6b7;
                         z-index: -1;
 
                         @media(max-width: 1200px) {
@@ -991,7 +995,7 @@ section.about {
                 position: absolute;
                 left: 50%;
                 top: 0;
-                transition: 3s linear;
+                transition: 5s linear;
             }
 
             &.active {
@@ -1053,7 +1057,7 @@ section.about {
                         font-size: 20px;
                         margin-bottom: 20px;
                         font-weight: bold;
-                        transition: 1.5s linear;
+                        transition: .5s linear;
 
 
                         @media(max-width:360px) {
@@ -1065,7 +1069,7 @@ section.about {
                         font-size: 16px;
                         color: #FFFFFF;
                         font-weight: 300;
-                        transition: 1.5s linear;
+                        transition: .5s linear;
 
                         @media(max-width:360px) {
                             font-size: 13px;
@@ -1084,7 +1088,7 @@ section.about {
 
                     p {
                         transform: translateX(-80px);
-                        transition: 1.5s linear;
+                        transition: .5s linear;
                     }
 
                     &:after {
@@ -1098,7 +1102,7 @@ section.about {
                         border-radius: 50%;
                         top: 60px;
                         z-index: 1;
-                        transition: 3s linear;
+                        transition: 1s linear;
                         opacity: 0;
                         transform: translateY(-120px);
                     }
@@ -1139,7 +1143,7 @@ section.about {
                         top: 70px;
                         right: 0;
                         z-index: 1;
-                        transition: .6s linear;
+                        transition: .5s linear;
 
                         @media(max-width: 1200px) {
                             writing-mode: unset;
@@ -1491,6 +1495,7 @@ section.projects {
                 transform: translateX(-100px);
                 max-width: 330px;
                 transition: 1s linear;
+                text-align: center;
 
                 @media(max-width:1200px) {
                     text-align: center;

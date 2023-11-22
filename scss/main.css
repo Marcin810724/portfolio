@@ -52,6 +52,11 @@ header:after {
   left: 0;
   top: 0;
 }
+@media (max-width: 1070px) {
+  header:after {
+    width: 45%;
+  }
+}
 @media (max-width: 991px) {
   header:after {
     width: 100%;
@@ -783,7 +788,7 @@ section.about .block .left .content .image:after {
   position: absolute;
   left: 50px;
   top: -50px;
-  background: rgba(0, 0, 0, 0.6117647059);
+  background: #b4b6b7;
   z-index: -1;
 }
 @media (max-width: 1200px) {
@@ -879,7 +884,7 @@ section.about .cv-content .wrapper-content-cv::before {
   position: absolute;
   left: 50%;
   top: 0;
-  transition: 3s linear;
+  transition: 5s linear;
 }
 section.about .cv-content .wrapper-content-cv.active::before {
   height: 100%;
@@ -923,7 +928,7 @@ section.about .cv-content .wrapper-content-cv .block-cv .right h3 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: bold;
-  transition: 1.5s linear;
+  transition: 0.5s linear;
 }
 @media (max-width: 360px) {
   section.about .cv-content .wrapper-content-cv .block-cv .left h3,
@@ -936,7 +941,7 @@ section.about .cv-content .wrapper-content-cv .block-cv .right p {
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 300;
-  transition: 1.5s linear;
+  transition: 0.5s linear;
 }
 @media (max-width: 360px) {
   section.about .cv-content .wrapper-content-cv .block-cv .left p,
@@ -954,7 +959,7 @@ section.about .cv-content .wrapper-content-cv .block-cv .left h3 {
 }
 section.about .cv-content .wrapper-content-cv .block-cv .left p {
   transform: translateX(-80px);
-  transition: 1.5s linear;
+  transition: 0.5s linear;
 }
 section.about .cv-content .wrapper-content-cv .block-cv .left:after {
   content: "";
@@ -967,7 +972,7 @@ section.about .cv-content .wrapper-content-cv .block-cv .left:after {
   border-radius: 50%;
   top: 60px;
   z-index: 1;
-  transition: 3s linear;
+  transition: 1s linear;
   opacity: 0;
   transform: translateY(-120px);
 }
@@ -999,7 +1004,7 @@ section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
   top: 70px;
   right: 0;
   z-index: 1;
-  transition: 0.6s linear;
+  transition: 0.5s linear;
 }
 @media (max-width: 1200px) {
   section.about .cv-content .wrapper-content-cv .block-cv .big-head h2 {
@@ -1303,6 +1308,7 @@ section.projects .project .section-content .col-left {
   transform: translateX(-100px);
   max-width: 330px;
   transition: 1s linear;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   section.projects .project .section-content .col-left {

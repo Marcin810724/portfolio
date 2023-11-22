@@ -1,24 +1,17 @@
-// Pobierz przycisk i div do zmiennych
 const menuButton = document.querySelector('.menu-btn');
 const menuDiv = document.querySelector('.menu');
 
 
-// Dodaj nasłuchiwanie na kliknięcie przycisku
+
 menuButton.addEventListener('click', function () {
-  // Użyj toggle() do dodawania i usuwania klasy "active" w jednym kroku
   menuDiv.classList.toggle('active');
   menuButton.classList.toggle('active');
 });
 
 
 
-
-
-// Dodaj nasłuchiwanie na kliknięcie w inny obszar dokumentu
 document.addEventListener('click', function (event) {
-  // Sprawdź czy kliknięcie nie nastąpiło na elemencie menuButton lub menuDiv
   if (event.target !== menuButton && event.target !== menuDiv) {
-    // Jeśli nie, usuń klasę "active" z menuDiv
     menuDiv.classList.remove('active');
     menuButton.classList.remove('active');
   }
@@ -26,39 +19,30 @@ document.addEventListener('click', function (event) {
 
 
 
-
-
-// Pobierz wszystkie linki z menu
 const menuLinks = document.querySelectorAll('.menu a');
-
-// Funkcja do sprawdzania, która sekcja jest aktualnie widoczna
 function checkSectionVisibility() {
   const scrollPosition = window.scrollY + (window.innerHeight / 2);
 
   // Iteruj przez sekcje
   menuLinks.forEach((link) => {
-    const sectionId = link.getAttribute('href').substring(1); // Pobierz ID sekcji z linku
+    const sectionId = link.getAttribute('href').substring(1);
     const section = document.getElementById(sectionId);
 
     if (section) {
       const sectionTop = section.offsetTop;
       const sectionBottom = sectionTop + section.offsetHeight;
 
-      // Sprawdź, czy środek ekranu znajduje się w granicach sekcji
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        // Usuń klasę "active" z wszystkich linków w menu
         menuLinks.forEach((link) => {
           link.classList.remove('active');
         });
-
-        // Dodaj klasę "active" do odpowiedniego linku w menu
         link.classList.add('active');
       }
     }
   });
 }
 
-// Wywołaj funkcję sprawdzającą widoczność sekcji przy załadowaniu strony i przy przewijaniu
+
 window.addEventListener('load', checkSectionVisibility);
 window.addEventListener('scroll', checkSectionVisibility);
 
@@ -83,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lazyImageObserver.observe(lazyImage);
     });
   } else {
-    // Possibly fall back to event handlers here
+
   }
 });
 
@@ -96,14 +80,14 @@ const inViewport = (elem) => {
   let allElements = document.getElementsByClassName(elem);
   let windowHeight = window.innerHeight;
   const elems = () => {
-    for (let i = 0; i < allElements.length; i++) { //  loop through the sections
+    for (let i = 0; i < allElements.length; i++) {
       let viewportOffset = allElements[i]
-        .getBoundingClientRect(); //  returns the size of an element and its position relative to the viewport
-      let top = viewportOffset.top; //  get the offset top
-      if (top < windowHeight) { //  if the top offset is less than the window height
-        allElements[i].classList.add('active'); //  add the class
+        .getBoundingClientRect();
+      let top = viewportOffset.top;
+      if (top < windowHeight) {
+        allElements[i].classList.add('active');
       } else {
-        allElements[i].classList.remove('active'); //  remove the class
+        allElements[i].classList.remove('active');
       }
     }
   }
@@ -111,7 +95,7 @@ const inViewport = (elem) => {
   window.addEventListener('scroll', elems);
 }
 
-inViewport('animate'); //  run the function on all section elements
+inViewport('animate'); //  
 
 
 
