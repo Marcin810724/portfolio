@@ -84,24 +84,22 @@ header .header-wrapper .logo svg {
     height: 30px;
   }
 }
-header .header-wrapper .logo h1 {
+header .header-wrapper .logo a {
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #000000;
   position: relative;
   z-index: 1;
 }
-header .header-wrapper .logo h1 a {
-  text-decoration: none;
-  font-size: 45px;
-  font-weight: 700;
-  margin-bottom: 0;
-  color: #000000;
-}
 @media (max-width: 991px) {
-  header .header-wrapper .logo h1 a {
-    font-size: 36px;
+  header .header-wrapper .logo a {
+    font-size: 32px;
   }
 }
 @media (max-width: 576px) {
-  header .header-wrapper .logo h1 a {
+  header .header-wrapper .logo a {
     font-size: 28px;
   }
 }
@@ -135,11 +133,15 @@ header .header-wrapper .menu-desctop ul li a {
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.2s linear;
 }
 header .header-wrapper .menu-desctop ul li a svg {
   height: 15px;
   fill: #FFFFFF;
   margin-right: 5px;
+}
+header .header-wrapper .menu-desctop ul li a:hover {
+  opacity: 0.6;
 }
 header .header-wrapper .menu-desctop ul li::marker {
   display: none;
@@ -230,7 +232,7 @@ button.menu-btn:hover span {
   top: 0;
   height: 100vh;
   width: 0;
-  background-color: var(--color-purple);
+  background-color: var(--color-black);
   transform: translateX(-160px);
   transition: 0.2s linear;
   display: flex;
@@ -253,10 +255,11 @@ button.menu-btn:hover span {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 300;
   color: #FFFFFF;
   text-decoration: none;
   transition: 0.2s linear;
+  text-transform: uppercase;
 }
 .menu ul li a svg {
   width: 30px;
@@ -271,16 +274,13 @@ button.menu-btn:hover span {
   }
 }
 .menu ul li a.active {
-  color: #000000;
+  color: rgba(255, 255, 255, 0.3764705882);
 }
 .menu ul li a.active svg {
-  fill: #000000;
+  fill: rgba(255, 255, 255, 0.3764705882);
 }
 .menu ul li a:hover {
-  color: #000000;
-}
-.menu ul li a:hover svg {
-  fill: #000000;
+  opacity: 0.6;
 }
 .menu.active {
   transform: translateX(0);
@@ -565,7 +565,7 @@ section.hero .img-hero {
     width: calc(100% - 36px);
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   section.hero .img-hero {
     width: 100%;
     height: 100%;
@@ -599,7 +599,7 @@ section.hero .swiper-pagination .swiper-pagination-bullet {
 section.hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color-purple);
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   section.hero .swiper-pagination {
     width: 100%;
     height: 50px;
@@ -1372,24 +1372,84 @@ section.technology .big-head h2 {
     bottom: -32px;
   }
 }
+section.technology .content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+section.technology .content .title h2 {
+  position: relative;
+  text-align: center;
+}
+section.technology .content .title h2::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-purple);
+  position: absolute;
+}
+section.technology .content .text p {
+  text-align: center;
+}
+section.technology .swiper {
+  margin-top: 60px;
+}
 section.technology .swiper .swiper-slide {
   position: relative;
 }
 section.technology .swiper .swiper-slide .icon {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
   min-height: 120px;
 }
+@media (max-width: 640px) {
+  section.technology .swiper .swiper-slide .icon {
+    min-height: 90px;
+  }
+}
 section.technology .swiper .swiper-slide .icon img {
-  max-width: 120px;
+  max-width: 90px;
   height: auto;
+  filter: grayscale(1);
+  opacity: 0.6;
 }
 section.technology .swiper .swiper-slide .text {
   text-align: center;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
+  opacity: 0.6;
+}
+@media (max-width: 640px) {
+  section.technology .swiper .swiper-slide .text {
+    font-size: 14px;
+  }
+}
+section.technology .content-slides-technology {
+  position: relative;
+}
+section.technology .content-slides-technology .swiper-button-next,
+section.technology .content-slides-technology .swiper-button-prev {
+  color: var(--color-black);
+}
+section.technology .content-slides-technology .swiper-button-next:after,
+section.technology .content-slides-technology .swiper-button-prev:after {
+  font-size: 25px;
+}
+@media (max-width: 500px) {
+  section.technology .content-slides-technology .swiper-button-prev {
+    left: -10px;
+  }
+}
+@media (max-width: 500px) {
+  section.technology .content-slides-technology .swiper-button-next {
+    right: -10px;
+  }
 }
 
 footer {
