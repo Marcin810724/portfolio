@@ -900,7 +900,7 @@ section.about {
                             display: block;
                             height: 3px;
                             width: 60px;
-                            bottom: -10px;
+                            bottom: -30px;
                             left: 50%;
                             transform: translateX(-50%);
                             background-color: var(--color-purple);
@@ -956,7 +956,7 @@ section.about {
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
-                        bottom: -5px;
+                        bottom: -30px;
                     }
                 }
             }
@@ -1171,6 +1171,20 @@ section.numbers {
             h2 {
                 color: #FFFFFF;
                 text-align: center;
+                margin-bottom: 60px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 3px;
+                    background-color: #FFFFFF;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -30px;
+                }
             }
         }
 
@@ -1496,7 +1510,7 @@ section.projects {
 
                     a {
                         &.btn {
-                            width: 100%;
+                            width: auto;
                         }
                     }
                 }
@@ -1539,7 +1553,7 @@ section.projects {
 
                         a {
                             &.btn {
-                                min-width: 250px;
+                                width: auto;
                             }
 
 
@@ -1626,13 +1640,14 @@ section.technology {
             h2 {
                 position: relative;
                 text-align: center;
+                margin-bottom: 60px;
 
                 &::before {
                     content: "";
                     display: block;
                     height: 3px;
                     width: 60px;
-                    bottom: -10px;
+                    bottom: -30px;
                     left: 50%;
                     transform: translateX(-50%);
                     background-color: var(--color-purple);
@@ -1863,7 +1878,7 @@ body #load.loader-removed {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 999;
     transition: .2s linear;
     transform: translateY(100%);
 

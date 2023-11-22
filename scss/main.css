@@ -808,7 +808,7 @@ section.about .block .right .content .title h2::before {
   display: block;
   height: 3px;
   width: 60px;
-  bottom: -10px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-purple);
@@ -852,7 +852,7 @@ section.about .cv-content .content .title h2::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -5px;
+  bottom: -30px;
 }
 section.about .cv-content .content .text p {
   color: var(--color-grey);
@@ -1027,6 +1027,19 @@ section.numbers .content {
 section.numbers .content .title h2 {
   color: #FFFFFF;
   text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+section.numbers .content .title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
 }
 section.numbers .content .text {
   margin-bottom: 60px;
@@ -1307,7 +1320,7 @@ section.projects .project .section-content .col-left .section-buttons {
   }
 }
 section.projects .project .section-content .col-left .section-buttons a.btn {
-  width: 100%;
+  width: auto;
 }
 section.projects .project .section-content .col-left.active {
   transform: translateX(0);
@@ -1344,7 +1357,7 @@ section.projects .project .section-content .col-right {
 }
 @media (max-width: 1200px) {
   section.projects .project .section-content .col-right .section-buttons a.btn {
-    min-width: 250px;
+    width: auto;
   }
 }
 
@@ -1418,13 +1431,14 @@ section.technology .content {
 section.technology .content .title h2 {
   position: relative;
   text-align: center;
+  margin-bottom: 60px;
 }
 section.technology .content .title h2::before {
   content: "";
   display: block;
   height: 3px;
   width: 60px;
-  bottom: -10px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-purple);
@@ -1618,7 +1632,7 @@ body #load.loader-removed {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 999;
   transition: 0.2s linear;
   transform: translateY(100%);
 }
