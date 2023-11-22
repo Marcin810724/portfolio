@@ -256,6 +256,7 @@ button.menu-btn {
         left: 0;
         top: 0;
         transition: .2s linear;
+        display: inline-block;
         opacity: 1;
 
         &:first-child {}

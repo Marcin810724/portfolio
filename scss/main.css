@@ -228,6 +228,7 @@ button.menu-btn span {
   left: 0;
   top: 0;
   transition: 0.2s linear;
+  display: inline-block;
   opacity: 1;
 }
 button.menu-btn span:nth-child(2) {
