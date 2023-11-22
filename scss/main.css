@@ -42,31 +42,32 @@ header {
   height: 60px;
   max-width: 1920px;
 }
+header:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 60px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 991px) {
+  header:after {
+    width: 100%;
+  }
+}
 @media (max-width: 991px) {
   header {
     height: 60px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
   }
 }
-header .title-menu {
-  font-size: 30px;
-  text-align: center;
-  position: relative;
-  top: 15px;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: none;
-}
-@media (max-width: 991px) {
-  header .title-menu {
-    display: block;
-  }
-}
 header .header-wrapper {
   padding: 0 60px;
   display: flex;
   justify-content: flex-end;
-  background-color: #FFFFFF;
+  background-color: #000000;
 }
 @media (max-width: 1660px) {
   header .header-wrapper {
@@ -83,21 +84,14 @@ header .header-wrapper .logo {
   height: 60px;
   display: flex;
   align-items: center;
-  display: none;
 }
 @media (max-width: 991px) {
   header .header-wrapper .logo {
     height: 60px;
-  }
-}
-header .header-wrapper .logo svg {
-  width: 35px;
-  height: 35px;
-}
-@media (max-width: 1200px) {
-  header .header-wrapper .logo svg {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    z-index: 1;
   }
 }
 header .header-wrapper .logo a {
@@ -108,6 +102,9 @@ header .header-wrapper .logo a {
   color: #000000;
   position: relative;
   z-index: 1;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 @media (max-width: 991px) {
   header .header-wrapper .logo a {
@@ -119,12 +116,25 @@ header .header-wrapper .logo a {
     font-size: 28px;
   }
 }
+header .header-wrapper .logo a img {
+  max-width: 160px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7472%) hue-rotate(108deg) brightness(91%) contrast(95%);
+}
+@media (max-width: 991px) {
+  header .header-wrapper .logo a img {
+    max-width: 130px;
+  }
+}
+@media (max-width: 500px) {
+  header .header-wrapper .logo a img {
+    max-width: 100px;
+  }
+}
 header .header-wrapper .menu-desctop {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   height: 60px;
 }
 @media (max-width: 991px) {
@@ -134,7 +144,7 @@ header .header-wrapper .menu-desctop {
 }
 header .header-wrapper .menu-desctop ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
 }
@@ -146,7 +156,7 @@ header .header-wrapper .menu-desctop ul li:last-child {
   margin-right: 0;
 }
 header .header-wrapper .menu-desctop ul li a {
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -156,7 +166,7 @@ header .header-wrapper .menu-desctop ul li a {
 }
 header .header-wrapper .menu-desctop ul li a svg {
   height: 15px;
-  fill: #000000;
+  fill: #ffffff;
   margin-right: 5px;
   transition: 0.2s linear;
 }
@@ -177,7 +187,7 @@ header .header-wrapper:after {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: #000000;
   display: none;
 }
 @media (max-width: 991px) {
