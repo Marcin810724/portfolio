@@ -1513,6 +1513,8 @@ section.technology .content-slides-technology .swiper-button-prev:after {
 footer {
   background-color: #000000;
   padding: 30px 0;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   footer {
@@ -1573,6 +1575,56 @@ footer .block .column a img {
 }
 footer .block .column a:hover {
   opacity: 0.6;
+}
+footer .big-head h2 {
+  opacity: 0.1;
+  font-size: 170px;
+  color: #FFFFFF;
+  transform: translateY(-50%);
+  font-family: var(--font-inter);
+  position: absolute;
+  bottom: -145px;
+  left: 0;
+  transition: 0.6s linear;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1030px) {
+  footer .big-head h2 {
+    font-size: 120px;
+    bottom: -102px;
+  }
+}
+@media (max-width: 905px) {
+  footer .big-head h2 {
+    font-size: 90px;
+    bottom: -80px;
+  }
+}
+@media (max-width: 675px) {
+  footer .big-head h2 {
+    font-size: 75px;
+    bottom: -60px;
+  }
+}
+@media (max-width: 550px) {
+  footer .big-head h2 {
+    font-size: 60px;
+    bottom: -50px;
+  }
+}
+@media (max-width: 445px) {
+  footer .big-head h2 {
+    font-size: 45px;
+    bottom: -38px;
+  }
+}
+@media (max-width: 340px) {
+  footer .big-head h2 {
+    font-size: 38px;
+    bottom: -32px;
+  }
 }
 
 /** Body Overlay **/

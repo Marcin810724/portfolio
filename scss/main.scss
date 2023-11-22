@@ -1747,6 +1747,8 @@ section.technology {
 footer {
     background-color: #000000;
     padding: 30px 0;
+    position: relative;
+    overflow: hidden;
 
     @media(max-width:1200px) {
         margin-bottom: 45px;
@@ -1807,6 +1809,54 @@ footer {
                 &:hover {
                     opacity: .6;
                 }
+            }
+        }
+    }
+
+
+    .big-head {
+        h2 {
+            opacity: 0.1;
+            font-size: 170px;
+            color: #FFFFFF;
+            transform: translateY(-50%);
+            font-family: var(--font-inter);
+            position: absolute;
+            bottom: -145px;
+            left: 0;
+            transition: 0.6s linear;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+
+            @media(max-width:1030px) {
+                font-size: 120px;
+                bottom: -102px;
+            }
+
+            @media(max-width:905px) {
+                font-size: 90px;
+                bottom: -80px;
+            }
+
+            @media(max-width:675px) {
+                font-size: 75px;
+                bottom: -60px;
+            }
+
+            @media(max-width:550px) {
+                font-size: 60px;
+                bottom: -50px;
+            }
+
+            @media(max-width:445px) {
+                font-size: 45px;
+                bottom: -38px;
+            }
+
+            @media(max-width:340px) {
+                font-size: 38px;
+                bottom: -32px;
             }
         }
     }
