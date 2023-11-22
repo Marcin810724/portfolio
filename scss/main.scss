@@ -1464,6 +1464,10 @@ section.projects {
                 background: url(../img/icons/iflsa.png);
             }
 
+            &.img-fixed-6 {
+                background: url(../img/icons/maleo.png);
+            }
+
             @media(max-width:1200px) {
                 display: none;
             }
@@ -1554,6 +1558,7 @@ section.projects {
                         a {
                             &.btn {
                                 width: auto;
+                                position: relative;
                             }
 
 
