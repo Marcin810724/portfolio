@@ -614,21 +614,30 @@
             window.addEventListener('scroll', checkVisibility);
         </script>
 
+
         <script>
             function isProjectsInView() {
                 const projectsSection = document.querySelector('#projects');
                 const menu = document.querySelector('.project-menu');
-                const rect = projectsSection.getBoundingClientRect();
 
-                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                    menu.style.display = 'block';
-                } else {
-                    menu.style.display = 'none';
+                // Check if menu element is found
+                if (menu) {
+                    const rect = projectsSection.getBoundingClientRect();
+
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
                 }
             }
+
             window.addEventListener('scroll', isProjectsInView);
             window.addEventListener('load', isProjectsInView);
         </script>
+
+
+
 
         <script>
             var swiper = new Swiper(".mySwiper-technology", {

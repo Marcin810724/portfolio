@@ -1283,22 +1283,19 @@ section.projects .project .img-fixed {
   }
 }
 section.projects .project .img-fixed.img-fixed-1 {
-  background: url(../img/icons/nowatorska.png);
+  background: url(../img/icons/nowatorska.webp);
 }
 section.projects .project .img-fixed.img-fixed-2 {
-  background: url(../img/icons/saniwell.png);
-}
-section.projects .project .img-fixed.img-fixed-3 {
-  background: url(../img/icons/suasio.png);
+  background: url(../img/icons/saniwell.webp);
 }
 section.projects .project .img-fixed.img-fixed-4 {
-  background: url(../img/icons/mczdrowia.png);
+  background: url(../img/icons/mczdrowia.webp);
 }
 section.projects .project .img-fixed.img-fixed-5 {
-  background: url(../img/icons/iflsa.png);
+  background: url(../img/icons/iflsa.webp);
 }
 section.projects .project .img-fixed.img-fixed-6 {
-  background: url(../img/icons/maleo.png);
+  background: url(../img/icons/maleo.webp);
 }
 @media (max-width: 1200px) {
   section.projects .project .img-fixed {
