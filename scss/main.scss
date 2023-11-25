@@ -193,10 +193,10 @@ header {
 
 
                         &:hover {
-                            color: var(--color-purple);
+                            opacity: .6;
 
                             svg {
-                                fill: var(--color-purple);
+                                opacity: .6;
                             }
                         }
                     }
