@@ -1297,6 +1297,12 @@ section.projects .project .img-fixed.img-fixed-5 {
 section.projects .project .img-fixed.img-fixed-6 {
   background: url(../img/icons/maleo.webp);
 }
+section.projects .project .img-fixed.img-fixed-7 {
+  background: url(../img/icons/pure-dent.webp);
+}
+section.projects .project .img-fixed.img-fixed-8 {
+  background: url(../img/icons/lobuz.webp);
+}
 @media (max-width: 1200px) {
   section.projects .project .img-fixed {
     display: none;
